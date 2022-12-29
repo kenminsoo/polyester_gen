@@ -17,7 +17,7 @@ fasta_loc <- '/out/subset_transcripts.fasta'
 
 fasta_file <- "/Users/kenminsoo/Desktop/Projects/JABSOM/Nakatsu/projects/polyester/out/subset_transcripts.fasta"
 
-#our current subset is at 1200
+#our current subset is at 1400, but change as please
 num_transcripts <- count_transcripts(fasta_file)
 
 set.seed(482)
