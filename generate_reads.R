@@ -26,4 +26,4 @@ fold_changes <- matrix(fold_change_values, nrow=num_transcripts)
 
 transcripts <- gsub("'", "", names(readDNAStringSet(fasta_file)))
 
-simulate_experiment(fasta_file, transcriptid=transcripts, fold_changes = fold_changes, outdir = 'out/sim_reads',seed = 313, readlen = 35, error_rate = 0, paired = FALSE, num_reps=c(5,5))
+simulate_experiment(fasta_file, transcriptid=transcripts, fold_changes = fold_changes, outdir = 'out/sim_reads',seed = 313, readlen = 35, error_rate = 0, paired = FALSE, num_reps=c(5,5), strand_specific = TRUE)
