@@ -11,8 +11,15 @@ Interactive will allow more customization of parameters while default will gener
 read length: 35
 pair ended: false
 error model: uniform, 0%
+stranded: true
 2) Test favorite tools. 
 
 # Features
 ## Customizable config with the main parameters from the package. 
 ## Choose where you want your reads to be put
+
+## Cohort Reads 1
+Generation features
+
+- No merged features
+- No duplicated features (i.e. large repeats) 

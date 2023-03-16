@@ -7,7 +7,6 @@ import pandas as pd
 import subprocess
 import random
 
-# Seed
 random.seed(31523)
 
 class my_dictionary(dict):
@@ -27,7 +26,7 @@ subprocess.run(["mkdir", out_dir])
 
 fasta_out = out_dir + "unique_transcripts.fasta"
 summary_out = out_dir + "summary.txt"
-gtf_path = "synthetic/hsa_pre_miRNA_final.gtf"
+gtf_path = "synthetic/SPRMT_merge_031323_seq_remove_merged.gtf"
 dup_remove = True
 summary_sub_out = out_dir + "summary_SPRMT_RMD.txt"
 sub_gtf = out_dir + "subset_SPRMT_RMD.gtf"
@@ -36,7 +35,6 @@ sub_gtf = out_dir + "subset_SPRMT_RMD.gtf"
 gtf_data = pd.read_table(gtf_path, header = None)
 gtf_data.columns = ["chr", "source", "feature", "start", "end", "score", "strand", "frame", "attribute"]
 gtf_data[['attribute', 'transcript_copy_id', 'sequence', 'biotype', 'bed_sequence']] = gtf_data['attribute'].str.split(';',expand = True)
-gtf_data["bed_sequence"] = gtf_data["bed_sequence"].str.upper()
 
 #keep only non-duplicated entries for base testings (i.e. the pipelines can function with no external variables)
 all_entry = len(gtf_data)

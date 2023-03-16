@@ -13,9 +13,8 @@ library(Biostrings)
 
 #this initial experiment creates simulated sequencing reads on the illumina 5 system with 
 #enter location of the fasta transcript file
-fasta_loc <- '/out/subset_transcripts.fasta'
 
-fasta_file <- "/Users/kenminsoo/Desktop/Projects/JABSOM/Nakatsu/projects/polyester/out/subset_transcripts.fasta"
+fasta_file <- "/Users/kenminsoo/Desktop/Projects/JABSOM/Nakatsu/projects/polyester/out/03_15_23/subset_transcripts_SPRMT_premiRNA_031523.fasta"
 
 #our current subset is at 1400, but change as please
 num_transcripts <- count_transcripts(fasta_file)
